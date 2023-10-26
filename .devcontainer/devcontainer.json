@@ -12,5 +12,11 @@
         "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
     ],
     "postCreateCommand": "sudo chown node node_modules",
-    "remoteUser": "node"
+    "remoteUser": "node",
+    "containerEnv": {
+        "NODE_ENV": "development",
+        "SHELL": "/bin/bash",
+        "GIT_ASKPASS": "vscode-git-askpass",
+        "GIT_SSL_CAINFO": "/etc/ssl/certs/ca-certificates.crt"
+    }
 }
