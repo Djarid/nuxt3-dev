@@ -1,0 +1,37 @@
+html,
+body,
+#__nuxt {
+  width: 100vw;
+  height: 100vh;
+}
+
+body,
+h1 {
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#__nuxt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #222;
+    color: #eee;
+  }
+}
