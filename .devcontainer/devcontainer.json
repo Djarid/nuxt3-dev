@@ -1,0 +1,16 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/typescript-node",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "streetsidesoftware.code-spell-checker"
+            ]
+        }
+    },
+    "forwardPorts": [3000],
+    "mounts": [
+        "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+    ],
+    "postCreateCommand": "sudo chown node node_modules",
+    "remoteUser": "node"
+}
