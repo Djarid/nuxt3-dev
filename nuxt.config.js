@@ -7,10 +7,19 @@ export default defineNuxtConfig({
             enabled: true
         }
     },
+    // ssr: false,
+    plugins: [
+        { src: '~/plugins/auth.js' }
+    ],
+
+    router: {
+        middleware: ['auth']
+    },
 
     runtimeConfig: {
         azure: {
             clientId: '', // can override with envvar NUXT_AZURE_CLIENT_ID
+            clientSecret: '', // can override with envvar NUXT_AZURE_CLIENT_SECRET
             tenantId: '', // can override with envvar NUXT_AZURE_TENANT_ID
             redirectUri: 'http://localhost:3000/blank.html', // can override with envvar NUXT_AZURE_REDIRECT_URI
         }

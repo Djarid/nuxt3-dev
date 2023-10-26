@@ -1,4 +1,5 @@
-import * as msal from '@azure/msal-browser'
+// import * as msal from '@azure/msal-browser'
+import { PublicClientApplication } from "@azure/msal-browser";
 
 let state = {
     applicationInstance: null,  
@@ -18,7 +19,9 @@ export const useAuth = () => {
             storeAuthStateInCookie: false, // Set this to "true" if you are having issues on IE11 or Edge
         },
     }
-    state.applicationInstance = new msal.PublicClientApplication(msalConfig);
+    const applicationInstance = new PublicClientApplication(msalConfig).initialize();
+    // applicationInstance.inititialize()
+    state.applicationInstance = applicationInstance
 
     return {
         signIn
