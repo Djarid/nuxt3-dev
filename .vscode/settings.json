@@ -1,10 +1,14 @@
 {
     "cSpell.words": [
+        "ASKPASS",
         "CAINFO",
         "composables",
         "devcontainer",
         "devcontainers",
         "msal",
-        "Nuxt"
+        "Nuxt",
+        "pinia",
+        "sdras",
+        "userdata"
     ]
 }

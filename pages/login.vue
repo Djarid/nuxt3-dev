@@ -1,13 +1,14 @@
 <template>
     <div>
         <h1>Login</h1>
-        <button @click="doLogin">Sign in with Azure AD</button>
+        <!-- <button @click="doLogin">Sign in with Azure AD</button> -->
+        <LoginScreen />
     </div>
 </template>
 
 
 <script>
-import { login } from '@/plugins/auth';
+import { login } from '~/legacy/plugins/auth.js';
 
 export default {
     methods: {

@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    ssr: false,
     devtools: {
         enabled: true,
 
@@ -9,7 +10,11 @@ export default defineNuxtConfig({
     },
     // ssr: false,
     plugins: [
-        { src: '~/plugins/auth.js' }
+        { src: '~/plugins/msal.ts', mode: 'client' }
+    ],
+
+    modules: [
+        "@pinia/nuxt",
     ],
 
     router: {
